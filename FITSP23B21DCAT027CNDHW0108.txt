@@ -1,21 +1,32 @@
-#question 8.1
-    input:
-        0.3 0.4 0.3
-        0.1 0.3 0.6
-        0.5 0.3 0.2
-    output:
-        1.5709505944546684
-        1.295461844238322
-        1.4854752972273344
+# Họ tên: Lê Sỹ Hoàng Anh
+# Mã SV: B21DCAT027
+# Nhóm lớp tín chỉ: 10
+# Lớp hành chính: D21CQAT03-B
+# Bài: 8
 
-#question 8.2: printed graph 3d
+#question 8.1
+    test case 01:
+        input: 0.3 0.4 0.3
+        output: 1.5709505944546684
+    test case 01:
+        input: 0.5 0.3 0.2
+        output: 1.4854752972273344
+    test case 03:
+        input: 0.1 0.3 0.6
+        output: 1.295461844238322
+
+#question 8.2:
+    test case 01:
+        noinput
+        output: printed graph 3d
 
 #question 8.3: printed graph 3d
-    input:
-        0.4
-        0.6
-        0.8
-    output:
-        1.570950594
-        1.370950594
-        0.9219280949
+    test case 01:
+        input: 0.4
+        output: printed graph 3d (max_value = 1.570950594)
+    test case 01:
+        input: 0.6
+        output: printed graph 3d (max_value = 1.370950594)
+    test case 03:
+        input: 0.8
+        output: printed graph 3d (max_value = 0.9219280949)

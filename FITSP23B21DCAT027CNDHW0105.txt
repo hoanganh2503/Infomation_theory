@@ -1,0 +1,39 @@
+# Họ tên: Lê Sỹ Hoàng Anh
+# Mã SV: B21DCAT027
+# Nhóm lớp tín chỉ: 10
+# Lớp hành chính: D21CQAT03-B
+# Bài: 5
+
+#limited Griesmer
+    test case 01:
+        input: 3 4
+        output: 7
+    test case 02:
+        input: 4 6
+        output: 10
+    test case 03:
+        input: 8 9
+        output: 16
+
+#limited Plotkin
+    test case 01:
+        input: 10 10
+        output: 5
+    test case 02:
+        input: 4 4
+        output: 2
+    test case 03:
+        input: 8 10
+        output: 5
+
+#limited Plotkin
+    test case 01:
+        input: 4 7
+        output: 4
+    test case 02:
+        input: 6 12
+        output: 7
+    test case 03:
+        input: 8 10
+        output: 3
+    

@@ -1,0 +1,32 @@
+# Họ tên: Lê Sỹ Hoàng Anh
+# Mã SV: B21DCAT027
+# Nhóm lớp tín chỉ: 10
+# Lớp hành chính: D21CQAT03-B
+# Bài: 2
+
+#question 2.1:
+    test case 01:
+        input: no input
+        output:
+            source: X
+            elsym: (['x_1','x_2','x_3','x_4'])   
+            elprob: [0.125, 0.25, 0.125, 0.5]    
+            elcodeword: ['000', '01', '001', '1']
+            avg_l: 1.75
+            sigma_l_2: 0.6875
+            isNewLess: 1
+            isLeftBrachZero: 1 
+
+#question 2.2:
+    test case 01:
+        input: x_2x_2x_1x_3x_4
+        output: 01010000011
+
+    test case 02:
+        input: x_1x_1x_2x_3x_4
+        output: 000000010011
+
+    test case 03: 
+        input: x_1x_1x_1x_1x_1x_1x_1
+        output: 000000000000000000000
+

@@ -1,0 +1,50 @@
+# Họ tên: Lê Sỹ Hoàng Anh
+# Mã SV: B21DCAT027
+# Nhóm lớp tín chỉ: 10
+# Lớp hành chính: D21CQAT03-B
+# Bài: 4
+
+#question 4.1
+    test case 01:
+        no input
+        output: 1
+
+#question 4.2
+    test case 01:
+        input:
+            1 0 1 0 0 0 1
+        output:
+            Đây là từ mã hợp lệ.
+    test case 02:
+        input:
+            1 1 1 0 0 0 1
+        output:
+            Đây là từ mã không hợp lệ.
+    test case 03:
+        input:
+            1 0 0 0 1 0 1
+        output:
+            Đây là từ mã không hợp lệ.
+
+#question 4.3
+    test case 01:
+        no input
+        output:
+            [0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 1, 0, 1, 1, 1]
+            [0, 1, 0, 1, 1, 1, 0]
+            [0, 1, 1, 1, 0, 0, 1]
+            [1, 0, 1, 1, 1, 0, 0]
+            [1, 0, 0, 1, 0, 1, 1]
+            [1, 1, 1, 0, 0, 1, 0]
+            [1, 1, 0, 0, 1, 0, 1]
+
+#question 4.4
+    test case 01:
+        no input
+        output: 1
+
+#question 4.5
+    test case 01:
+        no input
+        output: 1

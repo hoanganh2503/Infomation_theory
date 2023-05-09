@@ -1,32 +1,33 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import math
+import numpy as np
 
-# Hàm tính Entropy của nguồn
-def entropy(p, q, r):
-    return -p*np.log2(p) - q*np.log2(q) - r*np.log2(r)
+dx = dy = 1
 
-# Khởi tạo các giá trị p, q, r
-p_values = np.linspace(0, 1, 10)
-q_values = np.linspace(0, 1, 10)
-r_values = np.linspace(0, 1, 10)
+# Khởi tạo trục tọa độ 
+x = np.arange(0, 4+dx, dx)
+y = np.arange(0, 4+dy, dy)
+a1, b1 = np.meshgrid(x, y)
 
-# Tính Entropy tương ứng với từng bộ giá trị p, q, r
-entropy_values = np.zeros((len(p_values), len(q_values), len(r_values)))
-for i, p in enumerate(p_values):
-    for j, q in enumerate(q_values):
-        for k, r in enumerate(r_values):
-            entropy_values[i,j,k] = entropy(p, q, r)
+c = [[0, 0, 0, 0, 0],
+     [0, 1, 2, 3, 4],
+     [0, 1, 3, 4, 6],
+     [0, 1, 3, 4, 7],
+     [0, 1, 3, 4, 7]]
 
-# Hiển thị đồ thị 3D của các giá trị Entropy tương ứng
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
-X, Y = np.meshgrid(p_values, q_values)
-for k in range(len(r_values)):
-    Z = entropy_values[:,:,k]
-    ax.plot_surface(X, Y, Z, cmap='viridis')
-    ax.set_xlabel('p')
-    ax.set_ylabel('q')
-    ax.set_zlabel('Entropy')
-    ax.set_title('Entropy of (p, q, r={:.2f})'.format(r_values[k]))
-    plt.show()
+
+X = a1
+Y = b1
+Z = np.array(c)
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none', alpha=0.7)
+ax.set_xlabel('A Label')
+ax.set_ylabel('B Label')
+ax.set_zlabel('C Label')
+
+plt.show()
