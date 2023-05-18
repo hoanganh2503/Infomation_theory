@@ -1,0 +1,32 @@
+# Họ tên: Lê Sỹ Hoàng Anh
+# Mã SV: B21DCAT027
+# Nhóm lớp tín chỉ: 10
+# Lớp hành chính: D21CQAT03-B
+# Bài: 6
+
+#question 6.1:
+    test case 01:
+        input: 2
+        output: 111
+
+    test case 02:
+        input: 3
+        output: 1101 1011  
+
+    test case 03:
+        input: 6
+        output: 1000011 1000111 1001101 1010011 1011111 1100011 1100111 1110011 1111011 1111111
+
+#question 6.2:
+    test case 01:
+        input: 111
+        output: Đây là đa thức tối giản
+
+    test case 02:
+        input: 1000
+        output: Đây không phải là đa thức tối giản
+
+    test case 03: 
+        input: 101011
+        output: Đây không phải là đa thức tối giản
+

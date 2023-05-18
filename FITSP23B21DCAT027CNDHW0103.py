@@ -10,40 +10,28 @@ import sympy
 from sympy import Matrix
 
 codewords = ["1", "01", "001", "000"]
+codewords2 = ["1", "01", "001", "000"]
 
 # question 3.1
 def check_features():
     # check for even/uneven properties
-    check_even = 0
-    for i in range(0, len(codewords)-1):
-        if(len(codewords[i]) != len(codewords[i+1])):
-            check_even = 1
-            break
-    if(check_even == 1): print("Bộ mã không đều.\n")
+    is_uniform = all(len(word) == len(codewords[0]) for word in codewords)
+    if(is_uniform == False): print("Bộ mã không đều.\n")
     else: print("Bộ mã đều.\n")
 
-    # check singular/non-singular properties
-    check_singular = 0
-    for i in range(1, len(codewords)):
-        for j in range(0, i):
-            if(codewords[i] == codewords[j]):
-                check_singular = 1
-                break
-    if(check_singular == 0): 
-        print("Bộ mã không suy biến.\nVí dụ:")
-        # get example
-        x = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'k', 'l', 'm']
-        for i in range(0, len(codewords)):
-            print (x[i], "được mã hóa từ", codewords[i])
-    else: print("Bộ mã suy biến.")
-    print("\n")
+    # Kiểm tra tính prefix
+    is_prefix = all(word1 != word2[:len(word1)] for i, word1 in enumerate(codewords) for word2 in codewords if i != codewords.index(word2))
+    if is_prefix:
+        print("Bộ mã có tính prefix.")
+    else:
+        print("Bộ mã không có tính prefix.")    
 
-    check_uniquely_decodable = 0
-
-
-
-
+# question 3.5
+def is_permutation(codewords1, codewords2):
+    if sorted(codewords1) == sorted(codewords2): print("Đây là 2 hoán vị của nhau")
+    else: print("Đây không phải là 2 hoán vị của nhau")
 
 
 #practice
-check_features()
+# check_features()
+is_permutation(codewords1 = codewords , codewords2 = codewords2)

@@ -1,0 +1,30 @@
+# Họ tên: Lê Sỹ Hoàng Anh
+# Mã SV: B21DCAT027
+# Nhóm lớp tín chỉ: 10
+# Lớp hành chính: D21CQAT03-B
+# Bài: 3
+
+#question 3.1
+    test case 01:
+        input: ["1", "01", "001", "000"]
+        output: Đây là bộ mã không đều
+                Bộ mã không suy biến
+                Bộ mã được giải mã duy nhất
+                Bộ mã có tính prefix
+
+
+#question 3.5
+    test case 01:
+        input: ["1", "01", "001", "000"]
+               ["01", "1", "001", "000"]
+        output: Đây là 2 hoán vị của nhau
+
+    test case 012:
+        input: ["1", "01", "001", "000"]
+               ["011", "1", "001", "000"]
+        output: Đây không phải là 2 hoán vị của nhau
+
+    test case 03:
+        input: ["1", "01", "001", "000", "0000"]
+               ["0000", "01", "1", "001", "000"]
+        output: Đây là 2 hoán vị của nhau

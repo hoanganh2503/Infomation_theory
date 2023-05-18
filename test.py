@@ -1,33 +1,24 @@
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import math
 import numpy as np
 
-dx = dy = 1
+# Định nghĩa bộ mã
+my_code = ['1', '01', '001', '000']
 
-# Khởi tạo trục tọa độ 
-x = np.arange(0, 4+dx, dx)
-y = np.arange(0, 4+dy, dy)
-a1, b1 = np.meshgrid(x, y)
+# Chuyển đổi bộ mã thành một ma trận
+matrix = np.array([list(map(int, list(word))) for word in my_code])
 
-c = [[0, 0, 0, 0, 0],
-     [0, 1, 2, 3, 4],
-     [0, 1, 3, 4, 6],
-     [0, 1, 3, 4, 7],
-     [0, 1, 3, 4, 7]]
+# Tính số từ mã trong bộ mã
+n = len(my_code)
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-
-X = a1
-Y = b1
-Z = np.array(c)
-
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none', alpha=0.7)
-ax.set_xlabel('A Label')
-ax.set_ylabel('B Label')
-ax.set_zlabel('C Label')
-
-plt.show()
+# Kiểm tra từ mã có thể được tạo thành từ tổ hợp tuyến tính của các từ mã khác trong bộ mã hay không
+test_codeword = '011'
+test_vector = np.array(list(map(int, list(test_codeword))))
+for i in range(n):
+    A = matrix.copy()
+    A[:, i] = test_vector
+    if np.linalg.matrix_rank(A) == n:
+        coeffs = np.linalg.solve(matrix, test_vector)
+        if any(coeffs != 0):
+            print(f"The codeword {test_codeword} can be formed as a linear combination of the codewords in the code.")
+            break
+else:
+    print(f"The codeword {test_codeword} cannot be formed as a linear combination of the codewords in the code.")
